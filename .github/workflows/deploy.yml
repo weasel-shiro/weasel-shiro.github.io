@@ -5,6 +5,12 @@ on:
     branches:
       - master  # Se ejecutará cada vez que hagas push a master
 
+permissions:
+  contents: write      # permite crear/actualizar ramas y commits
+  pages: write         # (opcional, útil si usas GitHub Pages nativo)
+  id-token: write      # (necesario para autenticación moderna)
+
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
